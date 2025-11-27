@@ -152,15 +152,36 @@ resource "aws_iam_role_policy_attachment" "scheduler_attach" {
   policy_arn = aws_iam_policy.scheduler_policy.arn
 }
 
+
+
 # EventBridge Scheduler to run Lambda daily at 9 AM UTC
 resource "aws_scheduler_schedule" "daily_report" {
-  name                = "daily_report_schedule"
+  # The name of the scheduler (how it appears in AWS)
+  name = "daily_report_schedule"
+
+  # The schedule in cron syntax: "0 9 * * ? *" means
+  #  - minute 0
+  #  - hour 9 UTC
+  #  - every day of the month
+  #  - every month
+  #  - any day of the week (the '?' means no specific day)
+  #  - every year
   schedule_expression = "cron(0 9 * * ? *)"
-  flexible_time_window { mode = "OFF" }
+
+  # Flexible time window setting: OFF means the job will run exactly at the scheduled time
+  flexible_time_window { 
+    mode = "OFF"
+  }
+
+  # The target to execute when the schedule triggers
   target {
-    arn      = aws_lambda_function.report_lambda.arn
+    # ARN of the Lambda function to invoke
+    arn = aws_lambda_function.report_lambda.arn
+
+    # IAM Role ARN that EventBridge Scheduler uses to assume permission to invoke the Lambda
     role_arn = aws_iam_role.scheduler_role.arn
   }
 }
+
 
 
