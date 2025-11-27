@@ -20,6 +20,8 @@ The diagram illustrates the workflow:
 * **Lambda Function:** Python code to generate reports.
 * **IAM Roles:** Lambda and Scheduler roles with least privilege permissions.
 * **EventBridge Scheduler:** Triggers Lambda daily at 9 AM UTC.
+* **SES permissions:** The Lambda function’s IAM policy already allows sending emails via SES, but this functionality is not yet implemented in the Lambda code.
+
 
 ---
 
