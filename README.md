@@ -12,7 +12,7 @@ This project demonstrates how to **automate daily report generation on AWS** usi
 
 ## Architecture Overview
 
-![architectureLambdaS3](https://github.com/user-attachments/assets/d264de74-2529-48e8-9833-148de3b3787e)
+![alt text](DiagramInfrastructure.png)
 
 The diagram illustrates the workflow:
 
