@@ -44,6 +44,11 @@ The diagram illustrates the workflow:
 * Terraform installed.
 * Python 3.12 and `boto3` installed for Lambda deployment.
 * Git and GitHub account for version control.
+* `boto3` Python package for Lambda deployment. Instead of manually installing, you can use the included `requirements.txt` file:
+
+```bash
+pip install -r lambda/requirements.txt
+
 
 ---
 
