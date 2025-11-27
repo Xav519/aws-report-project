@@ -52,7 +52,7 @@ The diagram illustrates the workflow:
 
 ```bash
 pip install -r lambda/requirements.txt
-
+```
 
 ---
 
