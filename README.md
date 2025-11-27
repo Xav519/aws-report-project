@@ -67,35 +67,7 @@ terraform -v
 
 ---
 
-## Setting up Git and GitHub
 
-1. Verify Git installation:
-
-```bash
-git --version
-```
-
-2. Initialize Git repository:
-
-```bash
-git init
-```
-
-3. Link to GitHub repository:
-
-```bash
-git remote add origin https://github.com/<your-username>/<repo-name>.git
-```
-
-4. Commit and push changes:
-
-```bash
-git add .
-git commit -m "Initial commit"
-git push -u origin main
-```
-
----
 
 ## Project Setup
 
