@@ -62,10 +62,10 @@ resource "aws_iam_role" "lambda_role" {
   })
 }
 
-# IAM policy for Lambda (S3 + SES + Logs)
+# IAM policy for Lambda (S3 + Logs)
 resource "aws_iam_policy" "lambda_policy" {
   name        = "report_lambda_policy"
-  description = "Policy for Lambda to access S3 and SES"
+  description = "Policy for Lambda to access S3 buckets and CloudWatch Logs"
   policy = jsonencode({
     Version = "2012-10-17"
     Statement = [
@@ -80,18 +80,18 @@ resource "aws_iam_policy" "lambda_policy" {
         ]
       },
       {
-        Action = ["ses:SendEmail","ses:SendRawEmail"]
-        Effect = "Allow"
-        Resource = "*"
-      },
-      {
-        Action = ["logs:CreateLogGroup","logs:CreateLogStream","logs:PutLogEvents"]
+        Action = [
+          "logs:CreateLogGroup",
+          "logs:CreateLogStream",
+          "logs:PutLogEvents"
+        ]
         Effect = "Allow"
         Resource = "arn:aws:logs:*:*:*"
       }
     ]
   })
 }
+
 
 # Attach policy to Lambda role
 resource "aws_iam_role_policy_attachment" "lambda_attach" {
