@@ -13,7 +13,7 @@ This project demonstrates how to **automate daily report generation on AWS** usi
 ## Architecture Overview
 
 ![alt text](DiagramInfrastructure.png)
-*This architecture diagram was created using **MermaidChart** (https://www.mermaidchart.com).*
+*This architecture diagram was created using **MermaidChart** (https://www.mermaidchart.com).* <br /><br />
 
 The diagram illustrates the workflow:
 
