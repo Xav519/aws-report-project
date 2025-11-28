@@ -15,6 +15,7 @@ This project demonstrates how to **automate daily report generation on AWS** usi
 ![alt text](DiagramInfrastructure.png)
 *This architecture diagram was created using **MermaidChart** (https://www.mermaidchart.com).*
 
+
 The diagram illustrates the workflow:
 
 * **S3 Buckets:** `data_bucket` for input data, `reports_bucket` for generated reports.
