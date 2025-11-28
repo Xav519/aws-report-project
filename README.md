@@ -151,7 +151,7 @@ Report generated at 2025-11-27 22:27:28.742976
 > However, the `email_address` variable is included for future enhancements where SES could be used to send email notifications (such as emailing generated reports). For now, it has no effect on the deployed infrastructure.
 
 
-<br /><br /> 1. Initialize Terraform:
+<br /> 1. Initialize Terraform:
 
 ```bash
 terraform init
