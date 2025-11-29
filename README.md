@@ -194,6 +194,7 @@ terraform destroy -var="email_address=your_verified_email@example.com"
 - Zazon, M. Automated Report Generation with AWS EventBridge. GitHub. Retrieved from [https://github.com/mzazon/awesome-cloud-projects/blob/main/aws/automated-report-generation-eventbridge/automated-report-generation-eventbridge.md](https://github.com/mzazon/awesome-cloud-projects/blob/main/aws/automated-report-generation-eventbridge/automated-report-generation-eventbridge.md)  
 - OpenAI. ChatGPT (GPT-4/5 Model). Retrieved from [https://chat.openai.com](https://chat.openai.com)
 - MermaidChart. Diagramming Tool for Architecture & Workflows. Retrieved from [https://www.mermaidchart.com](https://www.mermaidchart.com)
+- Terraform registry. AWS Provider. Retrieved from [https://registry.terraform.io/providers/hashicorp/aws/latest/docs](https://registry.terraform.io/providers/hashicorp/aws/latest/docs)
 
 
 *— Xavier Dupuis*
